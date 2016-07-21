@@ -3,11 +3,18 @@ angular.module('userProfiles')
   return {
     
     login: function( user ) {
-      /* FIX ME */
+      return $http.post('http://localhost:3000/api/login', user);
     },
 
     getFriends: function() {
-    	/* FIX ME */
+    	return $http.get('http://localhost:3000/api/profiles').then(function (response) {
+    		return response.data;
+    	});
+    },
+
+    update: function(newUser) {
+    	return $http.put('http://localhost:3000/api/settings', newUser)
     }
+
   }
 });
