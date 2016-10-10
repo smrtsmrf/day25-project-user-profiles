@@ -23,6 +23,7 @@ var users = [
 
 module.exports = {
     login: function (req, res, next) {
+        console.log(req.session);
         req.session.currentUser = users.filter(function (user) {
             return user.name === req.body.name && user.password === req.body.password;
         })[0];

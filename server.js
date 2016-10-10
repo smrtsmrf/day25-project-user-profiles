@@ -5,7 +5,7 @@ var session = require('express-session');
 var config = require('./config.json')
 var profileCtrl = require('./controllers/profileCtrl');
 var userCtrl = require('./controllers/userCtrl');
-var port = 3000;
+var port = 4000;
 
 var app = express();
 
